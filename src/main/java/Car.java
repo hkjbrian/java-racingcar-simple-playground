@@ -1,7 +1,9 @@
 import java.util.Random;
 
 public class Car {
-    final private static int DEFAULT_POSITION = 0
+
+    final private static int DEFAULT_POSITION = 0;
+
     private String carName;
     private int carPosition = DEFAULT_POSITION;
 

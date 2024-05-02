@@ -15,4 +15,16 @@ public class Car {
             carPosition++;
         }
     }
+
+    public void readCarName(String name){
+        carName = name;
+    }
+
+    public int getCarPosition(){
+        return carPosition;
+    }
+
+    public String getCarName(){
+        return carName;
+    }
 }

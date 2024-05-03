@@ -12,6 +12,10 @@ public class CarRacing {
         this.chance = chance;
     }
 
+    public void readParticipantsNumber(int participantsNumber) {
+        this.participantsNumber = participantsNumber;
+    }
+
     public void startRace() {
         for (int i = 0; i < participantsNumber; i++) {
             makeCar();
@@ -33,9 +37,9 @@ public class CarRacing {
     }
 
     public void setCarsNames(List<String> carNames) {
-        int i = 0;
-        for (String carName : carNames) {
-            cars.get(i++).readCarName(carName);
+
+        for (int i = 0; i < participantsNumber; i++) {
+            cars.get(i).readCarName(carNames.get(i));
         }
     }
 

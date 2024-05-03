@@ -7,6 +7,10 @@ public class Car {
     private String carName;
     private int carPosition = DEFAULT_POSITION;
 
+    public Car(String carName) {
+        this.carName = carName;
+    }
+
     public void randomCarMoving() {
         Random random = new Random();
         int randomNumber = random.nextInt(0, 10);
@@ -16,15 +20,11 @@ public class Car {
         }
     }
 
-    public void readCarName(String name){
-        carName = name;
-    }
-
-    public int getCarPosition(){
+    public int getCarPosition() {
         return carPosition;
     }
 
-    public String getCarName(){
+    public String getCarName() {
         return carName;
     }
 }

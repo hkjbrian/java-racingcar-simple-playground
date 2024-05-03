@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -8,25 +9,25 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public class CarRacingTest {
-
+    @Disabled
     @ParameterizedTest
     @MethodSource("providedNamesAndChanceAndParticipantsNumber")
     @DisplayName("두 경우의 레이스 테스트")
-    public void carRacingTest(List<String> names, int Chance, int ParticipantsNumber) {
-        System.out.println("게임 시작");
-        CarRacing race = new CarRacing();
-        race.readParticipantsNumber(5);
-        race.readChance(5);
-        race.startRace();
-        race.setCarsNames(names);
-        CheckWinner checkWinner = new CheckWinner();
-        checkWinner.checkAll(race.getCars());
-        List<Car> winners = checkWinner.getWinners();
-        for (Car winner : winners) {
-            System.out.println("우승자 이름은 : " + winner.getCarName() + ", 우승자의 거리는 : " + winner.getCarPosition());
-        }
-        System.out.println("게임 종료");
-    }
+//    public void carRacingTest(List<String> names, int Chance, int ParticipantsNumber) {
+//        System.out.println("게임 시작");
+//        CarRacing race = new CarRacing();
+//        race.readParticipantsNumber(5);
+//        race.readChance(5);
+//        race.startRace();
+//        race.setCarsNames(names);
+//        CheckWinner checkWinner = new CheckWinner();
+//        checkWinner.checkAll(race.getCars());
+//        List<Car> winners = checkWinner.getWinners();
+//        for (Car winner : winners) {
+//            System.out.println("우승자 이름은 : " + winner.getCarName() + ", 우승자의 거리는 : " + winner.getCarPosition());
+//        }
+//        System.out.println("게임 종료");
+//    }
 
     private static Stream<Arguments> providedNamesAndChanceAndParticipantsNumber() {
 

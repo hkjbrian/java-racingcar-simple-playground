@@ -1,49 +1,32 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public class CarRacing {
 
-    private int participantsNumber; // 참여 자동차 대수
-    private int chance; // 주어진 횟수
-
-    private List<Car> cars = new ArrayList<>();
-
-    public void readChance(int chance){
-        this.chance = chance;
-    }
-
-    public void readParticipantsNumber(int participantsNumber) {
-        this.participantsNumber = participantsNumber;
-    }
-
-    public void startRace() {
-        for (int i = 0; i < participantsNumber; i++) {
-            makeCar();
-        }
-        for (Car car : cars) {
-            carRace(car);
-        }
-    }
-
-    private void makeCar() {
-        Car newCar = new Car();
-        cars.add(newCar);
-    }
-
-    private void carRace(Car car) {
+    public void startRace(List<Car> cars, int chance) {
         for (int i = 0; i < chance; i++) {
+            carsRace(cars);
+            printRace(cars);
+        }
+    }
+
+    private void carsRace(List<Car> cars) {
+        for (Car car : cars) {
             car.randomCarMoving();
         }
     }
 
-    public void setCarsNames(List<String> carNames) {
-
-        for (int i = 0; i < participantsNumber; i++) {
-            cars.get(i).readCarName(carNames.get(i));
+    private void printRace(List<Car> cars) {
+        System.out.println("실행결과");
+        for (Car car : cars) {
+            System.out.print(car.getCarName() + " : ");
+            printPosition(car.getCarPosition());
+            System.out.println();
         }
     }
 
-    public List<Car> getCars() {
-        return cars;
+    private void printPosition(int position) {
+        for (int i = 0; i < position; i++) {
+            System.out.print("-");
+        }
     }
 }

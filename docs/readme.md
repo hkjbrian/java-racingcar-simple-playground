@@ -1,15 +1,18 @@
-## 학습 테스트
+## step 3 기능 요구사항
 
-- [ ] Car
-  - [ ] randomCarMoving
-  - [ ] getCarPosition
-- [ ] CarRacing
-  - [ ] startRace
-    - [ ] carRace
-  - [ ] checkWinner
-    - [ ] checkPosition
--[ ] CheckWinner
-  - [ ] checkAll
-  - [ ] checkCar
+- [ ] 자동차에 이름을 부여한다.
+  - [ ] 자동차의 이름은 5자 이하만 가능하다.
+- 경주할 자동차 이름을 입력하세요(이름은 쉼표(,)를 기준으로 구분).
+- [ ] 몇 번의 이동을 할 것인지 입력한다.
+- 시도할 회수는 몇회인가요?
+- [ ] 자동차 경주의 우승자를 출력한다.
+
+### 수정사항
+- carRaceApplication 객체에서 3가지 주요 기능을 하도록 한다.
+  - setRacingInfo : 경주에 관한 데이터를 받고 초기화한다.
+  - startRace : 경주 진행
+  - checkWinner : 우승자 확인 및 출력
+
+
 
 
